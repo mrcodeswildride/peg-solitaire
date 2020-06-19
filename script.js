@@ -27,10 +27,10 @@ function clickSquare() {
       selectedSquare = this
       selectedSquare.classList.add(`selected`)
     }
-    else if (isTwoAway(this)) {
+    else {
       let middle = getMiddle(this)
 
-      if (middle.classList.contains(`peg`)) {
+      if (middle != null && middle.classList.contains(`peg`)) {
         selectedSquare.classList.remove(`selected`, `peg`)
         selectedSquare = null
 
@@ -46,16 +46,6 @@ function clickSquare() {
   }
 }
 
-function isTwoAway(square) {
-  let squareTwoLeft = getNeighbor(selectedSquare, -2, 0)
-  let squareTwoRight = getNeighbor(selectedSquare, 2, 0)
-  let squareTwoAbove = getNeighbor(selectedSquare, 0, -2)
-  let squareTwoBelow = getNeighbor(selectedSquare, 0, 2)
-
-  return square == squareTwoLeft || square == squareTwoRight ||
-    square == squareTwoAbove || square == squareTwoBelow
-}
-
 function getMiddle(square) {
   if (square == getNeighbor(selectedSquare, -2, 0)) {
     return getNeighbor(selectedSquare, -1, 0)
@@ -68,6 +58,9 @@ function getMiddle(square) {
   }
   else if (square == getNeighbor(selectedSquare, 0, 2)) {
     return getNeighbor(selectedSquare, 0, 1)
+  }
+  else {
+    return null
   }
 }
 
