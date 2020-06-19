@@ -2,89 +2,90 @@
 <html>
 
 <head>
-    <title>Peg Solitaire</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
-    <link rel="stylesheet" href="stylesheet.css">
+	<title>Peg Solitaire</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+	<link href="style.css" rel="stylesheet">
+	<script src="script.js" defer>
+
+	</script>
 </head>
 
 <body>
-    <h1>Peg Solitaire</h1>
+	<h1>Peg Solitaire</h1>
 
-    <div id="board">
-        <div class="row" index="0">
-            <div></div>
-            <div></div>
-            <div class="hole peg" index="2"></div>
-            <div class="hole peg" index="3"></div>
-            <div class="hole peg" index="4"></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="row" index="1">
-            <div></div>
-            <div></div>
-            <div class="hole peg" index="2"></div>
-            <div class="hole peg" index="3"></div>
-            <div class="hole peg" index="4"></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="row" index="2">
-            <div class="hole peg" index="0"></div>
-            <div class="hole peg" index="1"></div>
-            <div class="hole peg" index="2"></div>
-            <div class="hole peg" index="3"></div>
-            <div class="hole peg" index="4"></div>
-            <div class="hole peg" index="5"></div>
-            <div class="hole peg" index="6"></div>
-        </div>
-        <div class="row" index="3">
-            <div class="hole peg" index="0"></div>
-            <div class="hole peg" index="1"></div>
-            <div class="hole peg" index="2"></div>
-            <div class="hole" index="3"></div>
-            <div class="hole peg" index="4"></div>
-            <div class="hole peg" index="5"></div>
-            <div class="hole peg" index="6"></div>
-        </div>
-        <div class="row" index="4">
-            <div class="hole peg" index="0"></div>
-            <div class="hole peg" index="1"></div>
-            <div class="hole peg" index="2"></div>
-            <div class="hole peg" index="3"></div>
-            <div class="hole peg" index="4"></div>
-            <div class="hole peg" index="5"></div>
-            <div class="hole peg" index="6"></div>
-        </div>
-        <div class="row" index="5">
-            <div></div>
-            <div></div>
-            <div class="hole peg" index="2"></div>
-            <div class="hole peg" index="3"></div>
-            <div class="hole peg" index="4"></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="row" index="6">
-            <div></div>
-            <div></div>
-            <div class="hole peg" index="2"></div>
-            <div class="hole peg" index="3"></div>
-            <div class="hole peg" index="4"></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+	<div id="grid">
+		<div class="row">
+			<div></div>
+			<div></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="row">
+			<div></div>
+			<div></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="row">
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+		</div>
+		<div class="row">
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+		</div>
+		<div class="row">
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+		</div>
+		<div class="row">
+			<div></div>
+			<div></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div></div>
+			<div></div>
+		</div>
+		<div class="row">
+			<div></div>
+			<div></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div class="square peg"></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
 
-    <div id="sidePanel">
-        <p id="instructions">
-            Jump a peg to remove it. The goal is to end up with a single peg in the center.
-        </p>
+	<div id="sidePanel">
+		<p id="instructions">
+			Jump over a peg to remove it. The goal is to end up with a single peg in the center.
+		</p>
 
-        <p id="message"></p>
-    </div>
-
-    <script src="script.js"></script>
+		<p id="messageParagraph"></p>
+	</div>
 </body>
 
 </html>

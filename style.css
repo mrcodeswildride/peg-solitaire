@@ -1,0 +1,50 @@
+body {
+  background-color: beige;
+}
+
+#grid,
+#sidePanel {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#grid {
+  margin-right: 40px;
+  margin-bottom: 30px;
+  user-select: none;
+}
+
+.row > div {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  border: 2px solid transparent;
+}
+
+.row > .square {
+  background-color: white;
+  border-color: black;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.row > .peg {
+  background-color: #00a2e8;
+}
+
+.row > .selected {
+  background-color: yellow;
+}
+
+#instructions {
+  width: 325px;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+#messageParagraph {
+  color: #ff4c00;
+  font-size: 50px;
+  margin: 0px;
+}
