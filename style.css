@@ -22,7 +22,6 @@ body {
 }
 
 .row > .square {
-  background-color: white;
   border-color: black;
   border-radius: 42px;
   cursor: pointer;
