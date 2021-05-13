@@ -1,4 +1,3 @@
-let rows = document.getElementsByClassName(`row`)
 let squares = document.getElementsByClassName(`square`)
 let messageParagraph = document.getElementById(`messageParagraph`)
 
@@ -16,18 +15,15 @@ function clickSquare() {
         selectedSquare = this
         selectedSquare.classList.add(`selected`)
       }
-    }
-    else if (selectedSquare == this) {
+    } else if (selectedSquare == this) {
       selectedSquare.classList.remove(`selected`)
       selectedSquare = null
-    }
-    else if (this.classList.contains(`peg`)) {
+    } else if (this.classList.contains(`peg`)) {
       selectedSquare.classList.remove(`selected`)
 
       selectedSquare = this
       selectedSquare.classList.add(`selected`)
-    }
-    else {
+    } else {
       let middle = getMiddle(this)
 
       if (middle != null && middle.classList.contains(`peg`)) {
@@ -49,22 +45,21 @@ function clickSquare() {
 function getMiddle(square) {
   if (square == getNeighbor(selectedSquare, -2, 0)) {
     return getNeighbor(selectedSquare, -1, 0)
-  }
-  else if (square == getNeighbor(selectedSquare, 2, 0)) {
+  } else if (square == getNeighbor(selectedSquare, 2, 0)) {
     return getNeighbor(selectedSquare, 1, 0)
-  }
-  else if (square == getNeighbor(selectedSquare, 0, -2)) {
+  } else if (square == getNeighbor(selectedSquare, 0, -2)) {
     return getNeighbor(selectedSquare, 0, -1)
-  }
-  else if (square == getNeighbor(selectedSquare, 0, 2)) {
+  } else if (square == getNeighbor(selectedSquare, 0, 2)) {
     return getNeighbor(selectedSquare, 0, 1)
   }
-  else {
-    return null
-  }
+
+  return null
 }
 
 function getNeighbor(square, xDiff, yDiff) {
+  // array of rows
+  let rows = document.getElementsByClassName(`row`)
+
   let row = square.parentElement // row of square
   let y // y coordinate of square, set below
   let x // x coordinate of square, set below
@@ -89,8 +84,7 @@ function getNeighbor(square, xDiff, yDiff) {
   if (neighborRow == null) {
     // row is beyond edge, so no neighbor square
     return null
-  }
-  else {
+  } else {
     // if x + xDiff is beyond edge, will be null
     return neighborRow.children[x + xDiff]
   }
@@ -102,13 +96,11 @@ function isSolved() {
       if (!squares[i].classList.contains(`peg`)) {
         return false
       }
-    }
-    else {
+    } else {
       if (squares[i].classList.contains(`peg`)) {
         return false
       }
     }
-
   }
 
   return true

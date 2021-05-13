@@ -23,7 +23,7 @@ body {
 
 .row > .square {
   border-color: black;
-  border-radius: 42px;
+  border-radius: 50%;
   cursor: pointer;
 }
 

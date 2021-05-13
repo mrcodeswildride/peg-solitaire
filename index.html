@@ -1,91 +1,88 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Peg Solitaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Peg Solitaire</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.5">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>Peg Solitaire</h1>
 
-	</script>
-</head>
+    <div id="grid">
+      <div class="row">
+        <div></div>
+        <div></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="row">
+        <div></div>
+        <div></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="row">
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+      </div>
+      <div class="row">
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+      </div>
+      <div class="row">
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+      </div>
+      <div class="row">
+        <div></div>
+        <div></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="row">
+        <div></div>
+        <div></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div class="square peg"></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
 
-<body>
-	<h1>Peg Solitaire</h1>
+    <div id="sidePanel">
+      <p id="instructions">
+        Jump a peg over a neighbor to an empty hole to remove the neighbor. The goal is to end up
+        with a single peg in the center.
+      </p>
 
-	<div id="grid">
-		<div class="row">
-			<div></div>
-			<div></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div></div>
-			<div></div>
-		</div>
-		<div class="row">
-			<div></div>
-			<div></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div></div>
-			<div></div>
-		</div>
-		<div class="row">
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-		</div>
-		<div class="row">
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-		</div>
-		<div class="row">
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-		</div>
-		<div class="row">
-			<div></div>
-			<div></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div></div>
-			<div></div>
-		</div>
-		<div class="row">
-			<div></div>
-			<div></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div class="square peg"></div>
-			<div></div>
-			<div></div>
-		</div>
-	</div>
-
-	<div id="sidePanel">
-		<p id="instructions">
-			Jump a peg over a neighbor to an empty hole to remove the neighbor. The goal is to end up with a single peg in the center.
-		</p>
-
-		<p id="messageParagraph"></p>
-	</div>
-</body>
-
+      <p id="messageParagraph"></p>
+    </div>
+  </body>
 </html>
